@@ -3,7 +3,7 @@
     /// <summary>
     ///  This is interface for sorting by name and price.
     /// </summary>
-    internal interface ISortApplience
+    public interface ISortApplience
     {
         /// <summary>
         /// This is method for sorting by name.

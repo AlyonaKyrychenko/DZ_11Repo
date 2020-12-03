@@ -3,7 +3,7 @@
     /// <summary>
     ///  This class for climatic.
     /// </summary>
-    internal class Climatic : Appliances
+    public class Climatic : Appliances
     {
         private Seasons forSeason;
 
@@ -15,7 +15,7 @@
         /// <param name="powerConsumption">powerConsumption.</param>
         /// <param name="manufacturer">manufacturer.</param>
         /// <param name="forSeason">forSeason.</param>
-        public Climatic(string name, Size size, int powerConsumption, string manufacturer, decimal price, Seasons forSeason)
+        public Climatic(Name name, Size size, int powerConsumption, string manufacturer, decimal price, Seasons forSeason)
         {
             this.Name = name;
             this.Size = size;
@@ -34,7 +34,7 @@
         /// <param name="manufacturer">manufacturer.</param>
         /// <param name="forSeason">forSeason.</param>
         /// <param name="plugged">plugged.</param>
-        public Climatic(string name, Size size, int powerConsumption, string manufacturer, decimal price, Seasons forSeason, bool plugged)
+        public Climatic(Name name, Size size, int powerConsumption, string manufacturer, decimal price, Seasons forSeason, bool plugged)
         {
             this.Name = name;
             this.Size = size;

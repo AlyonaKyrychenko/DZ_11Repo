@@ -3,7 +3,7 @@
     /// <summary>
     ///  This class for clothing care.
     /// </summary>
-    internal class ForClothingCare : Appliances
+    public class ForClothingCare : Appliances
     {
         private Modes mode;
 
@@ -15,7 +15,7 @@
         /// <param name="powerConsumption">powerConsumption.</param>
         /// <param name="manufacturer">manufacturer.</param>
         /// <param name="mode">mode.</param>
-        public ForClothingCare(string name, Size size, int powerConsumption, string manufacturer, decimal price, Modes mode)
+        public ForClothingCare(Name name, Size size, int powerConsumption, string manufacturer, decimal price, Modes mode)
         {
             this.Name = name;
             this.Size = size;
@@ -34,7 +34,7 @@
         /// <param name="manufacturer">manufacturer.</param>
         /// <param name="mode">mode.</param>
         /// <param name="plugged">plugged.</param>
-        public ForClothingCare(string name, Size size, int powerConsumption, string manufacturer, decimal price, Modes mode, bool plugged)
+        public ForClothingCare(Name name, Size size, int powerConsumption, string manufacturer, decimal price, Modes mode, bool plugged)
         {
             this.Name = name;
             this.Size = size;

@@ -5,7 +5,7 @@
     /// </summary>
     public class Appliances
     {
-        private string name;
+        private Name name;
         private Size size;
         private int powerConsumption;
         private string manufacturer;
@@ -15,7 +15,7 @@
         /// <summary>
         ///  Gets or sets name.
         /// </summary>
-        public string Name { get => this.name; set => this.name = value; }
+        public Name Name { get => this.name; set => this.name = value; }
 
         /// <summary>
         ///  Gets or sets size.

@@ -1,26 +1,27 @@
 ﻿namespace DZ_11
 {
-    using System.Collections.Generic;
+    using System;
+    using System.Collections;
 
     /// <summary>
     ///  This class for setting appliences.
     /// </summary>
     public class AppliationSet : ISortApplience
     {
-        private List<Appliances> applianceList;
+        private Appliances[] applianceArray;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AppliationSet"/> class.
         /// </summary>
         public AppliationSet()
         {
-            this.applianceList = new List<Appliances>();
+            this.applianceArray = new Appliances[0];
         }
 
         /// <summary>
         ///  Gets or sets list.
         /// </summary>
-        public List<Appliances> ApplianceList { get => this.applianceList; set => this.applianceList = value; }
+        public Appliances[] ApplianceArray { get => this.applianceArray; set => this.applianceArray = value; }
 
         /// <summary>
         /// Add to collection.
@@ -28,19 +29,22 @@
         /// <param name="ob">object.</param>
         public void AddAppliance(Appliances ob)
         {
-            this.applianceList.Add(ob);
+            Array.Resize(ref this.applianceArray, this.applianceArray.Length + 1);
+            this.applianceArray[this.applianceArray.Length - 1] = ob;
         }
 
         /// <inheritdoc/>
         public void SortByPrice()
         {
-            this.applianceList.Sort(Sorting.CompareByPrice);
+            IComparer comparer = new ComparerByPrice();
+            Array.Sort(this.applianceArray, 0, this.applianceArray.Length, comparer);
         }
 
         /// <inheritdoc/>
         public void SortByPower()
         {
-            this.applianceList.Sort(Sorting.CompareByPower);
+            IComparer comparer = new ComparerByPower();
+            Array.Sort(this.applianceArray, 0, this.applianceArray.Length, comparer);
         }
     }
 }
