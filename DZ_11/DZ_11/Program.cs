@@ -1,12 +1,17 @@
-﻿using System;
-
-namespace DZ_11
+﻿namespace DZ_11
 {
-    class Program
+    /// <summary>
+    ///  This class performs an important function.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        ///  This is start of the programm.
+        /// </summary>
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Starter starter = new Starter();
+            starter.Run();
         }
     }
 }
